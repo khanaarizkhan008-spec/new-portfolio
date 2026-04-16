@@ -133,6 +133,11 @@
             0% { transform: translateY(0); pointer-events: all; }
             100% { transform: translateY(-100%); visibility: hidden; pointer-events: none; }
         }
+        @keyframes scroll-down-line {
+            0% { transform: translateY(-100%); }
+            50% { transform: translateY(100%); }
+            100% { transform: translateY(100%); }
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -151,7 +156,7 @@
 <a class="text-[#e2e2e2] hover:text-[#ff8f73] transition-colors duration-300" href="#work">Work</a>
 <a class="text-[#e2e2e2] hover:text-[#ff8f73] transition-colors duration-300" href="#about">About</a>
 <a class="text-[#e2e2e2] hover:text-[#ff8f73] transition-colors duration-300" href="#contact">Contact</a>
-<a class="bg-[#ff3d00] text-white px-6 py-2 rounded-full font-medium hover:opacity-80 transition-all active:scale-90 duration-200" href="#">Resume</a>
+<a class="bg-[#ff3d00] text-white px-6 py-2 rounded-full font-medium hover:opacity-80 transition-all active:scale-90 duration-200" href="https://drive.google.com/file/d/1tS89QIARzOCWJbZjJp-6PF-HUll6b6hA/view?usp=sharing" target="_blank">Resume</a>
 </div>
 <button class="md:hidden text-white">
 <span class="material-symbols-outlined">menu</span>
@@ -160,7 +165,7 @@
 </nav>
 <main>
 <!-- Hero Section -->
-<section class="min-h-screen flex flex-col justify-center px-8 pt-20" id="hero">
+<section class="min-h-screen flex flex-col justify-center px-8 pt-20 relative" id="hero">
 <div class="max-w-7xl mx-auto w-full">
 <div class="label-sm uppercase tracking-widest text-secondary text-[0.6875rem] mb-8 opacity-0 animate-[reveal-up_1s_ease-out_2.4s_forwards]">Personal Portfolio — 2024</div>
 <h1 class="font-headline text-[10vw] md:text-[8vw] leading-[0.9] font-bold tracking-tighter mb-12 overflow-hidden">
@@ -182,6 +187,12 @@
 <span class="text-sm font-label uppercase tracking-widest text-secondary">Based in Chennai, India</span>
 </div>
 </div>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 opacity-0 animate-[reveal-up_1.2s_ease-out_3.5s_forwards] flex flex-col items-center gap-4">
+<span class="text-[0.6rem] font-label uppercase tracking-widest text-[#4ade80] [writing-mode:vertical-rl]">Scroll</span>
+<div class="w-[2px] h-16 bg-[#4ade80]/20 overflow-hidden">
+<div class="w-full h-full bg-[#4ade80] rounded-full" style="animation: scroll-down-line 2s ease-in-out infinite;"></div>
 </div>
 </div>
 </section>
@@ -304,14 +315,20 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="py-40 px-8 bg-surface-container-highest">
+<section class="py-40 px-8 bg-surface-container-highest" id="contact">
 <div class="max-w-7xl mx-auto text-center">
 <h2 class="font-headline text-[8vw] md:text-[6vw] font-bold tracking-tighter leading-none mb-12">
                     Let's Build <br/>Something Great.
                 </h2>
-<a class="inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-medium hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl shadow-primary/20" href="mailto:khanaarizkhan008@gmail.com">
-                    Get in Touch <span class="material-symbols-outlined">mail</span>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="inline-flex items-center justify-center gap-4 bg-primary text-on-primary w-full sm:w-auto px-10 py-5 rounded-full text-lg font-medium hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl shadow-primary/20" href="mailto:khanaarizkhan008@gmail.com">
+                    Email Me <span class="material-symbols-outlined">mail</span>
 </a>
+<a class="inline-flex items-center justify-center gap-4 bg-[#0a66c2] text-white w-full sm:w-auto px-10 py-5 rounded-full text-lg font-medium hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl shadow-[#0a66c2]/20" href="https://www.linkedin.com/in/mohammad-aariz-khan-s-557566369" target="_blank">
+                    LinkedIn
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</a>
+</div>
 </div>
 </section>
 </main>
